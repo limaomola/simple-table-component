@@ -2,22 +2,23 @@ pipeline {
     agent {
         docker {
             image 'node:6-alpine'
+            args '-p 3000:3000'
         }
     }
     stages {
-        stage('install') {
+        stage('Install') {
             steps {
-                sh 'npm install'
+                sh 'yarn install'
             }
         }
         stage('Test') { 
             steps {
-                sh 'npm test'
+                sh 'yarn test'
             }
         }
         stage('Build') { 
             steps {
-                sh 'npm build'
+                sh 'yarn build'
             }
         }
     }
