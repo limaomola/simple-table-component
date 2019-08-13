@@ -1,0 +1,29 @@
+Si al iniciar la ejecuccion del pipeline da un error de permisos, poner en la consola lo siguiente:
+
+sudo setfacl -m user:$USER:rw /var/run/docker.sock
+
+
+
+Hacer un fork 
+DAR al boton de fork en el repositorio original
+las siguiente direcciones de github son el repositorio de destino, a donde se ha hecho el fork
+
+git clone https://github.com/limaomola/simple-table-component.git
+cd simple-table-component/
+git remote add upstream https://github.com/limaomola/simple-table-component.git
+
+
+docker cp /home/rodes/Escritorio/CI/Jenkinsfile jenkins:/home/final/simple-table-component
+
+Para hacer push
+
+git init
+git add .
+git commit -m "Add Jenkinsfile"
+git remote add origin youruser@yourserver.com:/path/to/my_project.git
+git push origin master
+
+
+El plugin de NodeJS no esta en la configuracion:
+
+ it seems this is no longer under Jenkins->Configure System, it was moved to Jenkins->Global Tool Configuration
